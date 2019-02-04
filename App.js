@@ -5,6 +5,13 @@ import EditableTimer from './components/EditableTimer';
 import ToggleableTimerForm from './components/ToggleableTimerForm';
 
 export default class App extends React.Component {
+  state = {
+    isOpen: false,
+    timer: {
+      // editable timer properties
+    },
+  };
+
   render() {
     return (
       <View style={styles.appContainer}>
@@ -35,20 +42,20 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   appContainer: {
-    flex: 1
+    flex: 1,
   },
   titleContainer: {
     paddingTop: 35,
     paddingBottom: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#D6D7DA'
+    borderBottomColor: '#D6D7DA',
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   timerList: {
-    paddingBottom: 15
-  }
+    paddingBottom: 15,
+  },
 });
